@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <Head>
+        <title>Patilkaki</title>
+        <link rel="stylesheet" href="hero.css">
+    </Head>
+    <body>
+        <section class="hero">
+            <h1>Dive into the D2C wave</h1>
+            <h4>Our brand, directly to customer's hearts.</h4>
+        </section>
+        <section class="about">
+            <div class="main">
+                <h1>ABOUT</h1>
+                <h2>PATILKAKI</h2>
+            </div>
+            <p>With PatilKaki Foods, every bite tells a story – a story of quality ingredients, time-honored recipes, and a commitment to excellence. Join us on a culinary adventure and experience the taste of tradition with PatilKaki Foods.</p>
+            <div class="descrip">
+                <img src="https://t4.ftcdn.net/jpg/02/90/75/05/240_F_290750591_fuodp0x8ZeM92JFZ6qf3S9Gamw14DPbj.jpg" alt="stock image">
+                <h6>At PatilKaki Foods, we're more than just a name. We're a legacy of flavor, tradition, and innovation. Our journey began with a passion for authentic Indian snacks, crafted with care and handed down through generations. Today, we continue that legacy, bringing you the finest selection of namkeens, savories, and delights straight from our kitchen to your home.</h6>
+            </div>
+        </section>
+        <section class="why-choose-section">
+            <h2>Why Choose Darsheel's Services?</h2>
+            <div class="icons">
+                <div class="icon1">
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/free-innovation-2606645-2175598.png" alt="innovation">
+                    <p>Mastery in Every Bite.Crafted with Precision.Fostering Creativity Every Step.</p>
+                </div>
+                <div class="icon1">
+                    <img src="https://media.istockphoto.com/id/1411955674/vector/experience-qualification-team-line-icon-satisfaction-user-customer-service-review-linear.jpg?s=612x612&w=0&k=20&c=2gGvpQuGEZDqnlrj_4m8mLGh1c17-kgfp3W3XzqNCgU=" alt="Customer Satisfaction">
+                    <p>Your Smile, Our Measure.Your Happiness, Our Culinary Canvas.</p>
+                </div>
+                <div class="icon1">
+                    <img src="https://static.vecteezy.com/system/resources/previews/014/730/439/original/personalized-care-line-icon-vector.jpg" alt="Personalized Service">
+                    <p>Tailoring Taste to Your Unique Choices.Customized Culinary Creations.</p>
+                </div>
+            </div>
+            <div class="icons">
+                <div class="icon2">
+                    <img src="https://static.thenounproject.com/png/1121702-200.png" alt="Reliability">
+                    <p>Consistent Excellence, Reliably Delicious, Every Time.</p>
+                </div>
+                <div class="icon3">
+                    <img src="https://static.thenounproject.com/png/1327175-200.png" alt="Quality Assurance">
+                    <p>Excellence Embodied, Ensured in Every Flavor.</p>
+                </div>
+            </div>
+        </section>  
+        <section class="timer">
+            <div class="quote">
+                <h1>Countdown to culinary bliss.</h1>
+                <h2>Tick-tock taste adventure!!!</h2>
+            </div>
+            <div class="count">
+                <p id="countdown"></p>
+                <script>
+                    function startCountdown() {
+                        var countDownDate = new Date().getTime() + (24 * 60 * 60 * 1000); 
+                        var x = setInterval(function() {
+                            var now = new Date().getTime();
+                            var distance = countDownDate - now;
+                            var hours = Math.floor(distance / (1000 * 60 * 60));
+                            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                            document.getElementById("countdown").innerHTML = hours + "h :" + minutes + "m :" + seconds + "s ";
+                            if (distance < 0) {
+                                clearInterval(x);
+                                startCountdown();
+                            }
+                        }, 1000); 
+                    }
+                    startCountdown();
+                </script>
+            </div>
+            <div class="order">
+                <button>ORDER NOW!</button>
+            </div>
+        </section>  
+        <div id="form-container" class="hidden">
+            <form id="slide-up-form">
+                <span class="close-icon" onclick="closeForm()">&#10006;</span> <!-- Cross mark -->
+                <h2>Register</h2>
+                <p>Feed your curiosity. Register with us today</p>
+                <input type="text" id="email" name="email" placeholder="Email Address" required>
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                <button type="submit">submit</button>
+            </form>
+        </div>  
+        <script src="form.js"></script>    
+    </body>
+</html>
